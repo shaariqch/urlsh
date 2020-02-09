@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'url_shorten.apps.UrlShortenConfig'
+    'url_shorten.apps.UrlShortenConfig',
     'crispy_forms'
 ]
 
