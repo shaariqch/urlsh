@@ -1,0 +1,39 @@
+html, body {
+    height: 100%;
+}
+
+.form-control {
+    height: calc(2.25rem + 60px) !important;
+    font-size: 40px !important; 
+}
+
+::-webkit-input-placeholder {
+    font-size: 40px;
+ }
+ .form-group {
+     margin-bottom: 0 !important;
+ }
+ 
+ .generated-url {
+    height: calc(2.25rem + 60px);
+    font-size: 40px;
+ }
+
+ .url-form {
+     background-color: #3c5c91;
+ }
+
+ .btn {
+     background-color: #5d47b3 !important;
+     border: 1px solid black !important;
+ }
+
+ .one-edge-shadow {
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+.dark-background {
+    background-color: #242545;
+}

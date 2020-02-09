@@ -1,0 +1,43 @@
+{% extends 'urlshortenservice/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+{% if generated %}
+<form class="url-form shadow-bg p-3 mb-5 one-edge-shadow" action="" method="post" novalidate>
+    <div class="d-flex flex-row justify-content-center mt-5 mb-4">
+        <div class="col-9">
+            {{ form|crispy }}
+        </div>
+        <div class="col-2">
+            <div class="d-flex h-100 flex-column justify-content-center">
+                <button type="submit" class="btn btn-success btn-lg btn-block"
+                    placeholder="Shorten your link">Shorten</button>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row justify-content-center">
+        <div class="col-11 generated-url shadow p-3 mb-5 bg-white rounded">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                {{ generated_url.short_url }}
+            </div>
+        </div>
+    </div>
+    {% csrf_token %}
+</form>
+{% else %}
+<form class="url-form shadow-bg p-3 mb-5 one-edge-shadow" action="" method="post" novalidate>
+    <div class="d-flex flex-row justify-content-center mb-5 mt-5">
+        <div class="col-9">
+            {{ form|crispy }}
+        </div>
+        <div class="col-2">
+            <div class="d-flex h-100 flex-column justify-content-center">
+                <button type="submit" class="btn btn-success btn-lg btn-block"
+                    placeholder="Shorten your link">Shorten</button>
+            </div>
+        </div>
+    </div>
+    {% csrf_token %}
+</form>
+{% endif %}
+{% endblock content %}
